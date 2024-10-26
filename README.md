@@ -2,7 +2,9 @@
 
 ![distro](https://img.shields.io/badge/Ubuntu%2024-Noble%20Numbat-orange)
 ![distro](https://img.shields.io/badge/ROS2-Jazzy-blue)
+[![jazzy](https://github.com/IntelligentRoboticsLabs/kobuki/actions/workflows/jazzy.yaml/badge.svg?branch=jazzy)](https://github.com/IntelligentRoboticsLabs/kobuki/actions/workflows/jazzy.yaml)
 [![jazzy-devel](https://github.com/IntelligentRoboticsLabs/kobuki/actions/workflows/jazzy-devel.yaml/badge.svg?branch=jazzy-devel)](https://github.com/IntelligentRoboticsLabs/kobuki/actions/workflows/jazzy-devel.yaml)
+![badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/Juancams/b88b51550724dc22c690a0734cf14709/raw/date_kobuki_jazzy.json)
 
 This project contains the launchers to run the [Turtlebot2 Kobuki](https://github.com/kobuki-base), both in simulated running different Gazebo worlds, as in the real robot using its drivers.
 

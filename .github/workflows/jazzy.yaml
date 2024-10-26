@@ -2,11 +2,17 @@ name: jazzy
 
 on:
   pull_request:
+    paths-ignore:
+      - 'README.md'
     branches:
       - jazzy
   push:
+    paths-ignore:
+      - 'README.md'
     branches:
       - jazzy
+  schedule:
+    - cron: "0 0 * * 1"
 
 jobs:
   build-and-test:
@@ -35,3 +41,11 @@ jobs:
                 "packages-up-to": true
               }
             }
+
+      - name: Date Action CI
+        uses: Juancams/date-last-ci@main
+        with:
+          gist_id: b88b51550724dc22c690a0734cf14709
+          gist_token: ${{ secrets.GIST_TOKEN }}
+          gist_filename: date_kobuki.json
+          show_hour: false
