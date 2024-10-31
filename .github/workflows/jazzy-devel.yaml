@@ -2,11 +2,17 @@ name: jazzy-devel
 
 on:
   pull_request:
+    paths-ignore:
+      - 'README.md'
     branches:
       - jazzy-devel
   push:
+    paths-ignore:
+      - 'README.md'
     branches:
       - jazzy-devel
+  schedule:
+    - cron: "0 0 * * 1"
 
 jobs:
   build-and-test:
@@ -35,3 +41,10 @@ jobs:
                 "packages-up-to": true
               }
             }
+      - name: Date Action CI
+        uses: Juancams/date-last-ci@main
+        with:
+          gist_id: 7f60a5f4c1a12cbb473210dd40b454e9
+          gist_token: ${{ secrets.GIST_TOKEN }}
+          gist_filename: date_kobuki_jazzy_devel.json
+          show_hour: false

@@ -171,7 +171,23 @@ def generate_launch_description():
         ]
     )
 
+    tf_footprint2base_cmd = Node(
+        package='tf2_ros',
+        executable='static_transform_publisher',
+        namespace='',
+        output='screen',
+        remappings=[
+            ('/tf', 'tf'), ('/tf_static', 'tf_static')
+        ],
+        arguments=[
+            '0.0', '0.0', '0.001',
+            '0.0', '0.0', '0.0',
+            '1.0', 'base_link', 'base_footprint'
+        ],
+    )
+
     ld.add_action(kobuki_cmd)
+    ld.add_action(tf_footprint2base_cmd)
     ld.add_action(declare_xtion_cmd)
     ld.add_action(declare_astra_cmd)
     ld.add_action(declare_lidar_cmd)
