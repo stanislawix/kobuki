@@ -25,7 +25,7 @@ source /opt/ros/jazzy/setup.bash
 Clone the repository to your workspace:
 ```bash
 cd <ros2-workspace>/src
-git clone https://github.com/IntelligentRoboticsLabs/kobuki.git
+git clone https://github.com/IntelligentRoboticsLabs/kobuki.git -b jazzy
 ```
 
 Prepare your thirparty repos:
