@@ -1,0 +1,53 @@
+name: rolling
+
+on:
+  pull_request:
+    paths-ignore:
+      - 'README.md'
+    branches:
+      - rolling
+  push:
+    paths-ignore:
+      - 'README.md'
+    branches:
+      - rolling
+  schedule:
+    - cron: "0 0 * * 1"
+
+jobs:
+  build-and-test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-24.04]
+      fail-fast: false
+    steps:
+      - name: Repo checkout
+        uses: actions/checkout@v2
+
+      - name: Setup ROS 2
+        uses: ros-tooling/setup-ros@0.7.9
+        with:
+          required-ros-distributions: rolling
+
+      - name: build and test
+        uses: ros-tooling/action-ros-ci@0.3.15
+        with:
+          package-name: kobuki
+          target-ros2-distro: rolling
+          vcs-repo-file-url: ${GITHUB_WORKSPACE}/thirdparty.repos
+          skip-test: true
+          colcon-defaults: |
+            {
+              "build": {
+                "packages-up-to": true
+              }
+            }
+
+      - name: Date Action CI
+        uses: Juancams/date-last-ci@main
+        with:
+          gist_id: 9ea39f851370d8036c9925d9811bc7ca
+          gist_token: ${{ secrets.GIST_TOKEN }}
+          gist_filename: date_kobuki_rolling.json
+          show_hour: false

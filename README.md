@@ -1,12 +1,18 @@
 # Kobuki from Intelligent Robotics Lab using ROS 2
 
-![distro](https://img.shields.io/badge/Ubuntu%2024-Noble%20Numbat-orange)
-![distro](https://img.shields.io/badge/ROS2-Jazzy-blue)
-[![jazzy](https://github.com/IntelligentRoboticsLabs/kobuki/actions/workflows/jazzy.yaml/badge.svg?branch=jazzy)](https://github.com/IntelligentRoboticsLabs/kobuki/actions/workflows/jazzy.yaml)
-[![jazzy-devel](https://github.com/IntelligentRoboticsLabs/kobuki/actions/workflows/jazzy-devel.yaml/badge.svg?branch=jazzy-devel)](https://github.com/IntelligentRoboticsLabs/kobuki/actions/workflows/jazzy-devel.yaml)
-![badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/Juancams/b88b51550724dc22c690a0734cf14709/raw/date_kobuki.json)
-
 This project contains the launchers to run the [Turtlebot2 Kobuki](https://github.com/kobuki-base), both in simulated running different Gazebo worlds, as in the real robot using its drivers.
+
+
+# Build status
+
+ROS2 Distro |  Ubuntu | Branch | Build status | Date last CI
+:---------: | :----: | :----------: | :-----------: | :---------------:
+![distro](https://img.shields.io/badge/ROS2-Rolling-green) | ![distro](https://img.shields.io/badge/Ubuntu%2024-Noble%20Numbat-orange) | [`rolling`](https://github.com/IntelligentRoboticsLabs/kobuki/tree/rolling) |[![rolling](https://github.com/IntelligentRoboticsLabs/kobuki/actions/workflows/rolling.yaml/badge.svg?branch=rolling)](https://github.com/IntelligentRoboticsLabs/kobuki/actions/workflows/rolling.yaml) | ![badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/Juancams/9ea39f851370d8036c9925d9811bc7ca/raw/date_kobuki_rolling.json) |
+![distro](https://img.shields.io/badge/ROS2-Jazzy-blue) | ![distro](https://img.shields.io/badge/Ubuntu%2024-Noble%20Numbat-orange) | [`jazzy`](https://github.com/IntelligentRoboticsLabs/kobuki/tree/jazzy) |[![jazzy](https://github.com/IntelligentRoboticsLabs/kobuki/actions/workflows/jazzy.yaml/badge.svg?branch=jazzy)](https://github.com/IntelligentRoboticsLabs/kobuki/actions/workflows/jazzy.yaml) | ![badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/Juancams/b88b51550724dc22c690a0734cf14709/raw/date_kobuki.json) |
+![distro](https://img.shields.io/badge/ROS2-Jazzy-blue) | ![distro](https://img.shields.io/badge/Ubuntu%2024-Noble%20Numbat-orange) | [`jazzy-devel`](https://github.com/IntelligentRoboticsLabs/kobuki/tree/jazzy-devel) | [![jazzy-devel](https://github.com/IntelligentRoboticsLabs/kobuki/actions/workflows/jazzy-devel.yaml/badge.svg?branch=jazzy-devel)](https://github.com/IntelligentRoboticsLabs/kobuki/actions/workflows/jazzy-devel.yaml) | ![badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/Juancams/7f60a5f4c1a12cbb473210dd40b454e9/raw/date_kobuki_jazzy_devel.json) |
+
+
+# Index
 
 - [Installation on your own computer](#installation-on-your-own-computer)  
 - [Run the robot in ROS 2](#run-the-robot-in-ros-2)  
@@ -17,9 +23,9 @@ This project contains the launchers to run the [Turtlebot2 Kobuki](https://githu
 
 
 # Installation on your own computer
-You need to have previously installed ROS2. Please follow this [guide](https://docs.ros.org/en/jazzy/Installation.html) if you don't have it.
+You need to have previously installed ROS2. Please follow this [guide](https://docs.ros.org/) if you don't have it.
 ```bash
-source /opt/ros/jazzy/setup.bash
+source /opt/ros/<ROS-DISTRO>/setup.bash
 ```
 
 Clone the repository to your workspace:
